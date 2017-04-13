@@ -5,12 +5,14 @@ var projects_component_1 = require('../projects-component/projects.component');
 var about_component_1 = require('../about-component/about.component');
 var contacts_component_1 = require('../contacts-component/contacts.component');
 var error_component_1 = require('../error-component/error.component');
+var details_component_1 = require('../proj-details-component/details.component');
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'projects', component: projects_component_1.ProjectsComponent },
     { path: 'about', component: about_component_1.AboutComponent },
     { path: 'contacts', component: contacts_component_1.ContactsComponent },
+    { path: 'projects/:id', component: details_component_1.DetailsComponent },
     { path: '**', component: error_component_1.ErrorComponent }
 ];
 exports.myRouterProviders = [

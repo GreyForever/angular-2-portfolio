@@ -14,7 +14,8 @@ var ContactsComponent = (function () {
     }
     ContactsComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/contacts-component/contacts.component.html'
+            templateUrl: 'app/contacts-component/contacts.component.html',
+            styles: ["\n.red{\n    color:red;\n    }\n.form-area\n{\n    background-color: #FAFAFA;\n\tpadding: 10px 40px 60px;\n\tmargin: 10px 0px 60px;\n\tborder: 1px solid GREY;\n\t}"]
         }), 
         __metadata('design:paramtypes', [])
     ], ContactsComponent);

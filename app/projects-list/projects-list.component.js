@@ -11,30 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_service_1 = require('../resources/http.service');
 var router_1 = require('@angular/router');
-var DetailsComponent = (function () {
-    function DetailsComponent(route, httpService) {
-        var _this = this;
-        this.route = route;
+var ProjectsListComponent = (function () {
+    function ProjectsListComponent(httpService) {
         this.httpService = httpService;
         this.projects = [];
-        this.routeSubscription = route.params.subscribe(function (params) { return _this.id = params['id']; });
     }
-    DetailsComponent.prototype.ngOnDestroy = function () {
-        this.routeSubscription.unsubscribe();
-    };
-    DetailsComponent.prototype.ngOnInit = function () {
+    ProjectsListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.httpService.getData().subscribe(function (data) { return _this.projects = data.json(); });
     };
-    DetailsComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], ProjectsListComponent.prototype, "projNumb", void 0);
+    ProjectsListComponent = __decorate([
         core_1.Component({
-            selector: 'proj-detail',
-            templateUrl: 'app/proj-details-component/details.component.html',
-            providers: [http_service_1.HttpService]
+            selector: 'projects-list',
+            templateUrl: 'app/projects-list/projects-list.component.html',
+            styles: ["\n.img-responsive\n{\n    max-width: 100%;\n\tmax-height: 200px;\n}\n"],
+            providers: [http_service_1.HttpService],
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, http_service_1.HttpService])
-    ], DetailsComponent);
-    return DetailsComponent;
+        __metadata('design:paramtypes', [http_service_1.HttpService])
+    ], ProjectsListComponent);
+    return ProjectsListComponent;
 }());
-exports.DetailsComponent = DetailsComponent;
-//# sourceMappingURL=details.component.js.map
+exports.ProjectsListComponent = ProjectsListComponent;
+//# sourceMappingURL=projects-list.component.js.map

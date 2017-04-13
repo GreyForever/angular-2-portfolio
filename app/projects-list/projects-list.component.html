@@ -1,0 +1,21 @@
+		 <div class="container">
+        <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        </div>
+
+        <div align="center" *ngIf="projNumb>3">
+            <button class="btn btn-default active" data-filter="all">All</button>
+            <button class="btn btn-default" data-filter="car1">cat1</button>
+            <button class="btn btn-default" data-filter="cat2">cat2</button>
+            <button class="btn btn-default" data-filter="cat3">cat3</button>
+        </div>
+        <br/>
+			<div *ngFor="let proj of projects; let i = index">
+            <div *ngIf="i<projNumb" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+			<div align="center"><b>{{proj.title}}</b>
+                <a routerLink="/projects/{{proj.id}}"><img src="{{proj.image}}" class="img-responsive"></a>
+				<p>{{proj.info | slice:0:80}}...</p></div>
+            </div>
+			</div>
+             </div>
+    </div>

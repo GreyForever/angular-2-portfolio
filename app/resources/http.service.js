@@ -9,18 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var projects_1 = require('./projects');
-var ProjectService = (function () {
-    function ProjectService() {
+var http_1 = require('@angular/http');
+var HttpService = (function () {
+    function HttpService(http) {
+        this.http = http;
     }
-    ProjectService.prototype.getProjects = function () {
-        return projects_1.ourProjects;
+    HttpService.prototype.getData = function () {
+        return this.http.get('app/resources/projbd.json');
     };
-    ProjectService = __decorate([
+    HttpService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
-    ], ProjectService);
-    return ProjectService;
+        __metadata('design:paramtypes', [http_1.Http])
+    ], HttpService);
+    return HttpService;
 }());
-exports.ProjectService = ProjectService;
-//# sourceMappingURL=projects.service.js.map
+exports.HttpService = HttpService;
+//# sourceMappingURL=http.service.js.map

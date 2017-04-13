@@ -9,12 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var projects_list_component_1 = require('../projects-list/projects-list.component');
 var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/home-component/home.component.html'
+            templateUrl: 'app/home-component/home.component.html',
+            directives: [router_1.ROUTER_DIRECTIVES, projects_list_component_1.ProjectsListComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);

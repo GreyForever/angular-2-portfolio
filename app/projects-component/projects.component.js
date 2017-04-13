@@ -9,12 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var projects_list_component_1 = require('../projects-list/projects-list.component');
 var ProjectsComponent = (function () {
     function ProjectsComponent() {
     }
     ProjectsComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/projects-component/projects.component.html'
+            templateUrl: 'app/projects-component/projects.component.html',
+            directives: [projects_list_component_1.ProjectsListComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], ProjectsComponent);

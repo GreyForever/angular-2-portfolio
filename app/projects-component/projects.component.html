@@ -1,21 +1,11 @@
    <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Last works</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <h1 class="jumbotron-heading">Portfolio</h1>
+        
       </div>
     </section>
-   <section>
-   <div class="album text-muted">
-      <div class="container">
-
-        <div class="row">
-          <div class="card" or="let project of projects">
-		  <p>№project.id <b>project.name</b></p>
-            <img src="app/resources/images/noImg.svg" alt="">
-            <p class="card-text">project.info</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-	   </section>
+	    <div class="album text-muted">
+			<div class="container">
+				<projects-list [projNumb]="12">Loading...</projects-list>
+		</div>    
+			</div>
