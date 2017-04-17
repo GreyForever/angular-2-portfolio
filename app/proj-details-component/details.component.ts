@@ -1,9 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
-import { Response} from '@angular/http';
-import { HttpService} from '../resources/http.service';
+import { Response } from '@angular/http';
+import { HttpService } from '../resources/http.service';
 import { Project } from '../resources/project';
-import { ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs/Subscription';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'proj-detail',

@@ -1,8 +1,20 @@
 import { Component } from '@angular/core';
+import { FORM_DIRECTIVES } from "@angular/forms";
+
+class Mail{
+    name: string; 
+    email: string;
+    phone: string;
+	subject: string;
+	message: string;
+}
 
 @Component({
   templateUrl: 'app/contacts-component/contacts.component.html',
-  styles: [`
+  directives: [FORM_DIRECTIVES],
+ styles: [`
+        input.ng-touched.ng-invalid {border:solid red 2px;}
+        input.ng-touched.ng-valid {border:solid green 2px;}
 .red{
     color:red;
     }
@@ -14,4 +26,11 @@ import { Component } from '@angular/core';
 	border: 1px solid GREY;
 	}`]
 })
-export class ContactsComponent { }
+export class ContactsComponent {
+
+mail: Mail = new Mail();
+    sendMail(){
+        console.log(this.mail);
+    }
+
+ }

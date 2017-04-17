@@ -14,11 +14,15 @@ var router_1 = require('@angular/router');
 var ProjectsListComponent = (function () {
     function ProjectsListComponent(httpService) {
         this.httpService = httpService;
+        this.catName = '';
         this.projects = [];
     }
     ProjectsListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.httpService.getData().subscribe(function (data) { return _this.projects = data.json(); });
+    };
+    ProjectsListComponent.prototype.toggle = function (cat) {
+        this.catName = cat;
     };
     __decorate([
         core_1.Input(), 
@@ -28,7 +32,7 @@ var ProjectsListComponent = (function () {
         core_1.Component({
             selector: 'projects-list',
             templateUrl: 'app/projects-list/projects-list.component.html',
-            styles: ["\n.img-responsive\n{\n    max-width: 100%;\n\tmax-height: 200px;\n}\n"],
+            styles: [".portfolio-item {margin-bottom: 25px;} .img-responsive {max-height: 300px; margin: auto;padding:5px;}\n\t.portfolio-item:hover{\n\t-moz-box-shadow: 0 0 10px #ccc; -webkit-box-shadow: 0 0 10px #ccc; box-shadow: 0 0 10px #ccc;\n\t}"],
             providers: [http_service_1.HttpService],
             directives: [router_1.ROUTER_DIRECTIVES]
         }), 

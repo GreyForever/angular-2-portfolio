@@ -7,12 +7,11 @@ import { ErrorComponent } from '../error-component/error.component';
 import { DetailsComponent } from '../proj-details-component/details.component';
 
 const routes: RouterConfig = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
-    { path: 'projects',  component: ProjectsComponent },
+    { path: 'portfolio',  component: ProjectsComponent },
     { path: 'about',  component: AboutComponent },
 	{ path: 'contacts',  component: ContactsComponent },
-	{ path: 'projects/:id', component: DetailsComponent},
+	{ path: 'portfolio/:id', component: DetailsComponent},
+	{ path: '', component: HomeComponent, pathMatch: 'full' },
     { path: '**', component: ErrorComponent }
 ];
 

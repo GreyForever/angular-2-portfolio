@@ -9,13 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require("@angular/forms");
+var Mail = (function () {
+    function Mail() {
+    }
+    return Mail;
+}());
 var ContactsComponent = (function () {
     function ContactsComponent() {
+        this.mail = new Mail();
     }
+    ContactsComponent.prototype.sendMail = function () {
+        console.log(this.mail);
+    };
     ContactsComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/contacts-component/contacts.component.html',
-            styles: ["\n.red{\n    color:red;\n    }\n.form-area\n{\n    background-color: #FAFAFA;\n\tpadding: 10px 40px 60px;\n\tmargin: 10px 0px 60px;\n\tborder: 1px solid GREY;\n\t}"]
+            directives: [forms_1.FORM_DIRECTIVES],
+            styles: ["\n        input.ng-touched.ng-invalid {border:solid red 2px;}\n        input.ng-touched.ng-valid {border:solid green 2px;}\n.red{\n    color:red;\n    }\n.form-area\n{\n    background-color: #FAFAFA;\n\tpadding: 10px 40px 60px;\n\tmargin: 10px 0px 60px;\n\tborder: 1px solid GREY;\n\t}"]
         }), 
         __metadata('design:paramtypes', [])
     ], ContactsComponent);
